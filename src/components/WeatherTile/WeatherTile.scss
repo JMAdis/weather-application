@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+
+.forecast-info {
+  border: 1px solid;
+  border-radius: 20px;
+  background-color: $clr-grey;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 1rem;
+  }
+
+  &__img {
+    max-width: 4rem;
+  }
+
+  &__info {
+    margin: 0.5rem;
+  }
+}
+
+p {
+  margin: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .forecast-info {
+    &__img {
+      max-width: 4.5rem;
+    }
+  }
+}

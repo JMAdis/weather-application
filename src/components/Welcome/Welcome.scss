@@ -1,0 +1,56 @@
+@use "../../styles/variables" as *;
+
+.welcome-container {
+  margin: 1rem;
+  width: 91%;
+  border: 1px solid;
+  border-radius: 20px;
+  background-image:url("../../assets/blue-background.jpg");
+  color: $clr-white;
+  font-family: $header-font;
+  
+
+  &__location {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text {
+    margin: 1rem 0.5rem;
+    font-weight: 500;
+  }
+
+  &__icon {
+    max-width: 2rem;
+    max-height: 2rem;
+    margin: 0.5rem;
+    margin-right: -0.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-container {
+    width: 26.5rem;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .welcome-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 40.5rem;
+
+    &__location {
+      margin-top: 0.75rem;
+      align-items: flex-start;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .welcome-container {
+    width: 47rem;
+    margin: 2rem 5rem;
+  }
+}
