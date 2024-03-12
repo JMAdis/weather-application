@@ -1,21 +1,18 @@
 import "./WeatherContainer.scss";
 import WeatherTile from "../../components/WeatherTile/WeatherTile";
 import WeatherType from "../../types/WeatherTypes";
-import LocationType from "../../types/LocationType";
 import { useEffect, useState } from "react";
 
 
 const WeatherContainer = () => {
   const [currentWeather, setCurrentWeather] = useState<WeatherType | null>(null);
   const [forecast, setForecast] = useState<WeatherType[]>([]);
-  const [location, setLocation] = useState<LocationType | null>(null);
 
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude} = position.coords;
-          setLocation({latitude, longitude});
 
           fetchCurrentWeather(latitude, longitude);
 

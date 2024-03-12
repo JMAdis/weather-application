@@ -20,8 +20,7 @@ const Welcome = () => {
 
       setCurrentTime(`${hours}:${minutes} ${ampm}`);
 
-      const options = { weekday: "long", day: "numeric", month: "long" };
-      setCurrentDayAndDate(now.toLocaleDateString("en-UK"));
+      setCurrentDayAndDate(now.toLocaleDateString("en-GB"));
     }, 1000);
 
     if (navigator.geolocation) {

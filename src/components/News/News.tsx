@@ -26,7 +26,6 @@ const truncateHeadline = (headline : string, maxLength: number): string => {
 };
 
 const formatDate = (dateString: string) : string => {
-  const options = {day: "numeric", month: "numeric", year: "numeric"};
   const formattedDate = new Date(dateString).toLocaleString("en-GB");
   return formattedDate;
 }
